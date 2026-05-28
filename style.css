@@ -1,0 +1,432 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header y Navegación */
+header {
+    background: #1C1C38;
+    color: #FFFFFF;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative; /* Para posicionar el menú desplegable */
+}
+
+.logo a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    text-align: left; /* Alineado a la izquierda por defecto */
+}
+
+/* Estilo para el logo (imagen) */
+.logo-img {
+    height: 70px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Por defecto, los enlaces se muestran en fila */
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #B5973D;
+}
+
+/* Estilos del botón de menú hamburguesa (oculto por defecto en escritorio) */
+.menu-toggle {
+    display: none; /* Oculto en escritorio */
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 5px;
+    outline: none;
+}
+
+
+/* Sección Hero */
+#hero {
+    background: url('Recursos/img/portada.jpg') no-repeat center center/cover;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 100px 20px;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    background: #39413cb2;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+    background: #39413cb2;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn {
+    background: #B5973D;
+    color: #FFFFFF;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #a08436;
+}
+
+/* Secciones de Contenido */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section:nth-child(even) {
+    background: #f4f4f4;
+}
+
+h1 { /* Títulos principales de sección */
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    color: #1C1C38;
+}
+
+h2 { /* Título de testimonios */
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #FFFFFF; /* Para que sea blanco en la sección de testimonios */
+}
+
+/* Sección Misión y Visión */
+#mision-vision {
+    padding: 60px 20px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.mv-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.mv-item {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.mv-item h3 {
+    color: #1C1C38;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Grid de Servicios */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-item {
+    background: #FFFFFF;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 450px; /* Ajustado para el contenido con listas */
+}
+
+.service-item h3 {
+    color: #B5973D;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.service-item p { /* Esto es para el párrafo principal del servicio, si lo hubiera */
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+/* Estilos para listas dentro de service-item */
+.service-item ul {
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.service-item ul li {
+    margin-bottom: 5px;
+}
+
+/* Contenedor y Estilos para la Imagen de Servicio */
+.service-item .service-image-container {
+    width: 100%;
+    max-width: 250px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-item .service-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Testimonios */
+#testimonios {
+    background: #1C1C38;
+    color: #FFFFFF;
+}
+
+.testimonial-item {
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.testimonial-item span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #B5973D;
+}
+
+/* Formulario de Contacto */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-info {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 30px;
+}
+
+.contact-info h3 {
+    color: #1C1C38;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    color: #1C1C38;
+}
+
+/* Footer */
+footer {
+    background: #1C1C38;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9rem;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVE DESIGN (MÓVILES) */
+@media (max-width: 768px) {
+    /* Ocultar el menú de navegación por defecto en móviles */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute; /* Posiciona el menú debajo del header */
+        top: 100%; /* Justo debajo de la barra de navegación */
+        left: 0;
+        background: #1C1C38; /* Fondo del menú desplegable */
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+        padding: 10px 0;
+    }
+
+    .nav-links.active { /* Clase que se activará con JavaScript para mostrar el menú */
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+        text-align: center; /* Centrar los ítems del menú */
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        display: block; /* Para que el enlace ocupe todo el ancho del li */
+        padding: 10px 0;
+    }
+
+    /* Mostrar el botón de menú hamburguesa en móviles */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Centrar el logo y el nombre de la empresa en la barra de navegación en móviles */
+    nav {
+        flex-direction: row; /* Mantener en fila el logo y el botón de menú */
+        justify-content: center; /* Centrar el contenido de la nav */
+        position: relative; /* Asegura que los elementos hijos se posicionen correctamente */
+    }
+
+    .logo {
+        flex-grow: 1; /* Permitir que el logo ocupe el espacio disponible para centrarse */
+        text-align: center; /* Centrar el contenido del logo (imagen y texto) */
+    }
+
+    .logo a {
+        justify-content: center; /* Centrar el ítem flex dentro del logo */
+    }
+
+    .logo-img {
+        height: 60px; /* Reducir un poco el logo en móviles si es necesario */
+        margin-right: 5px;
+    }
+
+    /* Ajustes generales de tamaño para móviles */
+    #hero {
+        padding: 60px 20px; /* Menos padding en móviles */
+        height: auto;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        padding: 8px 15px;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        padding: 8px 15px;
+        max-width: 90%; /* Ajustar ancho máximo del párrafo */
+    }
+
+    h1 { /* Títulos de sección en móviles */
+        font-size: 2.2rem;
+    }
+
+    h2 { /* Título de testimonios en móviles */
+        font-size: 2.2rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+
+    .mv-item {
+        min-width: 100%;
+    }
+
+    /* Ajustes específicos para servicios en móviles */
+    .service-item {
+        padding: 25px;
+        min-height: auto;
+    }
+
+    .service-item h3 {
+        font-size: 1.6rem;
+    }
+
+    .service-item p {
+        font-size: 1rem;
+    }
+
+    .service-item ul {
+        font-size: 0.9rem;
+    }
+
+    .service-item .service-image-container {
+        max-width: 180px;
+        height: 130px;
+        margin-bottom: 15px;
+    }
+
+    .contact-info p,
+    .contact-info h3 {
+        font-size: 1rem;
+    }
+}
